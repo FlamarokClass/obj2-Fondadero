@@ -48,26 +48,31 @@ public class Fondeadero {
 		return retorno; 
 	}
 
-		public Double obtenerPrecioDeAmarre(Yate yate) {
-			Double precioAmarrer = 0.0;
-			if(amarras.contains(yate)) {
-				precioAmarrer += yate.costeDeAmarre();
-			}
-			return precioAmarrer;
+	public Double obtenerPrecioDeAmarre(Yate yate) {
+		Double precioAmarrer = 0.0;
+		if(amarras.contains(yate)) {
+			precioAmarrer += yate.costeDeAmarre();
+		}
+		return precioAmarrer;
 			
-		}
+	}
 		
-		public Double obtenerRecaudacionTotal() {
-			Double valorTotal = 0.0;
-			for(Yate yate : this.amarras) {
-				valorTotal += yate.costeDeAmarre();
-				}
-			return valorTotal;
+	public Double obtenerRecaudacionTotal() {
+		Double valorTotal = 0.0;
+		for(Yate yate : this.amarras) {
+			valorTotal += yate.costeDeAmarre();
 		}
+		return valorTotal;
+	}
 		
-		public Object ordenarYatesPorEslora() {
-			 Collections.sort(amarras);
-			return amarras;
-		}
+	public Object ordenarYatesPorEslora() {
+		Collections.sort(amarras);
+		return amarras;
+	}
+	
+	public Yate miPrimerYate() {
+		return amarras.getFirst();
+		
+	}
 		
 }

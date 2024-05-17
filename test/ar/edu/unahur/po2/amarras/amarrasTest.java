@@ -184,10 +184,11 @@ public class amarrasTest {
 		miFondeadero.amarrarUnYate(miYateVela);
 		miFondeadero.amarrarUnYate(miSegundoYateVela);
 		miFondeadero.amarrarUnYate(miYateMotor);
-		Object valorObtenido = miFondeadero.ordenarYatesPorEslora();
-		Object valorEsperado = ;
-		//Contrastación
-		assertEquals(valorObtenido, );
+		miFondeadero.ordenarYatesPorEslora();
+		Yate valorObtenido = miFondeadero.miPrimerYate();
+		Yate valorEsperado = miSegundoYateVela;
+		//Contrastación	
+		assertEquals(valorObtenido, valorEsperado );
 	}
 		
 }
